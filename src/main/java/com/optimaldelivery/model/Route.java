@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Route {
 
-    private int distance;
-    private int cost;
+    private String source;
+    private String destination;
 }
