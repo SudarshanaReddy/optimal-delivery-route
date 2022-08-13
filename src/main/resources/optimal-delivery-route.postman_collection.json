@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "043a8fdc-0d16-4a71-9188-79b5936f2af8",
+		"name": "optimal-delivery-route",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/register/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"register",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-delivery-location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"source\" : \"sandton\",\n    \"destination\": \"pretoria\",\n    \"distance\": 15,\n    \"cost\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/delivery-location/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"delivery-location",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-delivery-locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/delivery-location/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"delivery-location",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-delivery-location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"source\":\"midra\",\n    \"destination\":\"sandton\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/delivery-location/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"delivery-location",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-delivery-location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"source\" : \"pretoria\",\n    \"destination\": \"sandton\",\n    \"distance\": 15,\n    \"cost\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/delivery-location/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"delivery-location",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-optimal-route",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"source\":\"midrand\",\n    \"destination\": \"pretoria\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/optimal-route/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"optimal-route",
+						"find"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
